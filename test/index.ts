@@ -18,7 +18,7 @@ const toolbox = generateFieldTestBlocks('color_wheel', [
       color: '#FF00FF',
       width: 140,
       options: {
-        layoutDirection: 'horizontal',
+        layoutDirection: 'vertical',
       },
     },
   },

@@ -12,7 +12,7 @@ import iro from '@jaames/iro';
 import type {ColorPickerProps} from '@jaames/iro/dist/ColorPicker';
 
 /**
- * This is the class for the color wheel
+ * This is the class for the color wheel.
  */
 export class ColorWheelField extends Blockly.FieldColour {
   /**
@@ -56,12 +56,7 @@ export class ColorWheelField extends Blockly.FieldColour {
     editor.classList.add('blockly-color-wheel-container');
     // Will position the content.  The last argument is a
     // callback that used for cleanup.
-    Blockly.DropDownDiv.showPositionedByField(this, () => editor.remove());
-    console.log({
-      width: this.width, // controls the size of the color picker
-      color: this.getValue(), // starts the color picker at a certain value,
-      ...this.options, // These options will over ride everything
-    });
+
     // eslint-disable-next-line new-cap
     const colorPicker = iro.ColorPicker(editor, {
       width: this.width, // controls the size of the color picker
@@ -73,6 +68,7 @@ export class ColorWheelField extends Blockly.FieldColour {
     colorPicker.on('color:change', (color) => {
       this.setValue(color.hexString);
     });
+    Blockly.DropDownDiv.showPositionedByField(this, () => editor.remove());
   }
 }
 

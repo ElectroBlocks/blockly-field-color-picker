@@ -1,6 +1,5 @@
 /**
  * @license
- * Copyright 2021 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -13,7 +12,7 @@ import iro from '@jaames/iro';
 import type {ColorPickerProps} from '@jaames/iro/dist/ColorPicker';
 
 /**
- * This provides a color wheel field.
+ * This is the class for the color wheel
  */
 export class ColorWheelField extends Blockly.FieldColour {
   /**
@@ -32,7 +31,7 @@ export class ColorWheelField extends Blockly.FieldColour {
     super(color);
   }
   /**
-   * Constructs a ColorPickerField from a JSON arg object.
+   * Constructs a ColorWheelField from a JSON arg object.
    * @param {!Object} options A JSON object with options.
    * @return {!ColorWheelField} The new field instance.
    * @package

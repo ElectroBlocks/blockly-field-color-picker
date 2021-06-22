@@ -25,6 +25,8 @@ For the options you don't have to pass anything in.  It will default to
 
 You can control the starting color by passing in the a hex value.  You can control the width by passing in a number for the second value.   You can over ride any of the default options by passing in a ColorPickerProps.  Read [IRO Color Pickers Docs](https://github.com/jaames/iro.js?ref=devawesome.io#color-picker-options) to learn more. 
 
+The container of the color picker has the 'blockly-color-wheel-container' class attached to the HTML.  Allowing you to style it.
+
 ### JavaScript
 ```js
 import * as Blockly from 'blockly';

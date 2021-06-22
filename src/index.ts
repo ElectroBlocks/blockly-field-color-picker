@@ -15,14 +15,14 @@ import type {ColorPickerProps} from '@jaames/iro/dist/ColorPicker';
 /**
  * This provides a color wheel field.
  */
-export class ColorPickerField extends Blockly.FieldColour {
+export class ColorWheelField extends Blockly.FieldColour {
   /**
    * Class for the color picker.
    *
    * @param {string} color The starting color for the color.
    *  It's a hex value, #ff00ff.
    * @param {number} width Width of the color picker.
-   * @param {Partial<ColorPickerField>} options The iro color wheel options.
+   * @param {ColorPickerProps} options The iro color wheel options.
    */
   constructor(
     protected color: string,
@@ -34,12 +34,12 @@ export class ColorPickerField extends Blockly.FieldColour {
   /**
    * Constructs a ColorPickerField from a JSON arg object.
    * @param {!Object} options A JSON object with options.
-   * @return {!ColorPickerField} The new field instance.
+   * @return {!ColorWheelField} The new field instance.
    * @package
    * @nocollapse
    */
   static fromJson(options) {
-    return new ColorPickerField(
+    return new ColorWheelField(
         options['color'],
         options['size'] || 150,
         options['options'] || {}
@@ -77,4 +77,4 @@ export class ColorPickerField extends Blockly.FieldColour {
   }
 }
 
-Blockly.fieldRegistry.register('color_wheel', ColorPickerField);
+Blockly.fieldRegistry.register('color_wheel', ColorWheelField);

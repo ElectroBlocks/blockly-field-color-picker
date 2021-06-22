@@ -1,4 +1,4 @@
-# Blockly Color Picker Field [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
+# Blockly Color Wheel Field [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
 This is a blockly color picker / wheel that uses the [IRO Color Picker](https://github.com/jaames/iro.js).  This field will return a hex value, but you can configure it to return whatever format you want.  
 
@@ -10,12 +10,12 @@ This is a blockly color picker / wheel that uses the [IRO Color Picker](https://
 
 ### Yarn
 ```
-yarn add blockly-field-color-picker
+yarn add blockly-field-color-wheel
 ```
 
 ### npm
 ```
-npm install blockly-field-color-picker --save
+npm install blockly-field-color-wheel --save
 ```
 
 ## Usage
@@ -28,11 +28,11 @@ You can control the starting color by passing in the a hex value.  You can contr
 ### JavaScript
 ```js
 import * as Blockly from 'blockly';
-import {ColorPickerField} from 'blockly-field-color-picker';
-Blockly.Blocks["color_picker"] = {
+import {ColorPickerField} from 'blockly-field-color-wheel';
+Blockly.Blocks["color_wheel_picker"] = {
   init: function () {
     this.appendDummyInput()
-      .appendField("template: ")
+      .appendField("Color: ")
       .appendField(new ColorPickerField("#00FF00", 150, {
         layoutDirection: 'horizontal',
       }), "COLOR")
@@ -43,11 +43,11 @@ Blockly.Blocks["color_picker"] = {
 
 ```js
 import * as Blockly from 'blockly';
-import 'blockly-field-color-picker';
+import 'blockly-field-color-wheel';
 Blockly.defineBlocksWithJsonArray([
     {
-        "type": "color_picker",
-        "message0": "template: %1",
+        "type": "color_wheel_picker",
+        "message0": "Color: %1",
         "args0": [
             {
                 "type": "field_template",

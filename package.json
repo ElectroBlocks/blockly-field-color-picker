@@ -1,0 +1,63 @@
+{
+  "name": "blockly-field-color-picker",
+  "version": "0.0.0",
+  "description": "A blockly color wheel / color picker.",
+  "scripts": {
+    "audit:fix": "blockly-scripts auditFix",
+    "build": "blockly-scripts build",
+    "clean": "blockly-scripts clean",
+    "dist": "blockly-scripts build prod",
+    "lint": "blockly-scripts lint",
+    "predeploy": "blockly-scripts predeploy",
+    "prepublishOnly": "npm run clean && npm run dist",
+    "start": "blockly-scripts start",
+    "test": "blockly-scripts test"
+  },
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "unpkg": "./dist/index.js",
+  "author": "",
+  "keywords": [
+    "blockly",
+    "blockly-plugin",
+    "blockly-field",
+    "color-wheel"
+  ],
+  "homepage": "",
+  "bugs": {},
+  "repository": {},
+  "license": "Apache-2.0",
+  "directories": {
+    "dist": "dist",
+    "src": "src"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "@blockly/dev-scripts": "^1.2.6",
+    "@blockly/dev-tools": "^2.4.0",
+    "@blockly/eslint-config": "^2.1.0",
+    "blockly": "^5.20210325.1",
+    "typescript": "^4.3.4"
+  },
+  "peerDependencies": {
+    "blockly": ">=3"
+  },
+  "publishConfig": {},
+  "eslintConfig": {
+    "extends": "@blockly/eslint-config"
+  },
+  "engines": {
+    "node": ">=8.17.0"
+  },
+  "browserslist": [
+    "defaults",
+    "IE 11",
+    "IE_Mob 11"
+  ],
+  "dependencies": {
+    "@jaames/iro": "^5.5.1"
+  }
+}

@@ -1,4 +1,4 @@
-# blockly-field-color-wheel [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
+# Blockly Color Picker Field [![Built on Blockly](https://tinyurl.com/built-on-blockly)](https://github.com/google/blockly)
 
 This is a blockly color picker / wheel that uses the [IRO Color Picker](https://github.com/jaames/iro.js).  This field will return a hex value, but you can configure it to return whatever format you want.  
 

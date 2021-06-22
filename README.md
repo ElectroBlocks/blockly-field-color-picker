@@ -4,7 +4,7 @@ This is a blockly color picker / wheel that uses the [IRO Color Picker](https://
 
 ![example 1](docs/demo1.png)
 
-![example 2](docs/demo1.png)
+![example 2](docs/demo2.png)
 
 ## Installation
 

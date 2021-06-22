@@ -1,6 +1,6 @@
 {
   "name": "blockly-field-color-wheel",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A blockly color wheel / color picker.",
   "scripts": {
     "audit:fix": "blockly-scripts auditFix",

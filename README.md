@@ -2,9 +2,9 @@
 
 This is a blockly color picker / wheel that uses the [IRO Color Picker](https://github.com/jaames/iro.js).  This field will return a hex value.
 
-![example 1](docs/demo1.png)
+![example 1](https://github.com/ElectroBlocks/blockly-field-color-wheel/raw/main/docs/demo1.png)
 
-![example 2](docs/demo2.png)
+![example 2](https://github.com/ElectroBlocks/blockly-field-color-wheel/raw/main/docs/demo2.png)
 
 ## Installation
 

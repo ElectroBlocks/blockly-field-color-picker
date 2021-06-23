@@ -16,16 +16,22 @@
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "unpkg": "./dist/index.js",
-  "author": "",
+  "author": "Noah Glaser",
   "keywords": [
     "blockly",
     "blockly-plugin",
     "blockly-field",
     "color-wheel"
   ],
-  "homepage": "",
-  "bugs": {},
-  "repository": {},
+  "homepage": "https://github.com/ElectroBlocks/blockly-field-color-wheel#blockly-color-wheel-field-",
+  "bugs": {
+    "url" : "https://github.com/ElectroBlocks/blockly-field-color-wheel/issues",
+    "email" : "glaserpower@gmail.com"  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElectroBlocks/blockly-field-color-wheel.git"
+  },
   "license": "Apache-2.0",
   "directories": {
     "dist": "dist",

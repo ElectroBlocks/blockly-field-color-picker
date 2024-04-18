@@ -7,14 +7,14 @@
  * @fileoverview This color picker / wheel.
  */
 
-import * as Blockly from 'blockly/core';
-import iro from '@jaames/iro';
-import type {ColorPickerProps} from '@jaames/iro/dist/ColorPicker';
+import { DropDownDiv, FieldColour, fieldRegistry } from "blockly/core";
+import iro from "@jaames/iro";
+import type { ColorPickerProps } from "@jaames/iro/dist/ColorPicker";
 
 /**
  * This is the class for the color wheel.
  */
-export class ColorWheelField extends Blockly.FieldColour {
+export class ColorWheelField extends FieldColour {
   /**
    * Class for the color picker.
    *
@@ -39,9 +39,9 @@ export class ColorWheelField extends Blockly.FieldColour {
    */
   static fromJson(options) {
     return new ColorWheelField(
-        options['color'],
-        options['size'] || 150,
-        options['options'] || {}
+      options["color"],
+      options["size"] || 150,
+      options["options"] || {}
     );
   }
 
@@ -49,11 +49,11 @@ export class ColorWheelField extends Blockly.FieldColour {
    * Over rides colour picker to show the popup.
    */
   showEditor_() {
-    const editor = document.createElement('div');
+    const editor = document.createElement("div");
     // Appends to the content div
-    Blockly.DropDownDiv.getContentDiv().appendChild(editor);
+    DropDownDiv.getContentDiv().appendChild(editor);
     // Add class so it can be styled easily
-    editor.classList.add('blockly-color-wheel-container');
+    editor.classList.add("blockly-color-wheel-container");
     // Will position the content.  The last argument is a
     // callback that used for cleanup.
 
@@ -65,11 +65,11 @@ export class ColorWheelField extends Blockly.FieldColour {
     });
 
     // Callback when the color picker changes
-    colorPicker.on('color:change', (color) => {
+    colorPicker.on("color:change", (color) => {
       this.setValue(color.hexString);
     });
-    Blockly.DropDownDiv.showPositionedByField(this, () => editor.remove());
+    DropDownDiv.showPositionedByField(this, () => editor.remove());
   }
 }
 
-Blockly.fieldRegistry.register('color_wheel', ColorWheelField);
+fieldRegistry.register("color_wheel", ColorWheelField);

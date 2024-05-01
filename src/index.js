@@ -7,7 +7,7 @@
  * @fileoverview This color picker / wheel.
  */
 
-import { DropDownDiv, FieldColour, fieldRegistry } from "blockly/core";
+import { DropDownDiv, FieldColour, fieldRegistry } from "blockly";
 import iro from "@jaames/iro";
 
 /**

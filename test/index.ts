@@ -8,17 +8,17 @@
  * @fileoverview Field test.
  */
 
-import * as Blockly from 'blockly';
-import {generateFieldTestBlocks, createPlayground} from '@blockly/dev-tools';
-import '../src/index';
+import { BlocklyOptions, Workspace, inject } from "blockly";
+import { generateFieldTestBlocks, createPlayground } from "@blockly/dev-tools";
+import "../src/index";
 
-const toolbox = generateFieldTestBlocks('color_wheel', [
+const toolbox = generateFieldTestBlocks("color_wheel", [
   {
     args: {
-      color: '#FF00FF',
+      color: "#FF00FF",
       width: 140,
       options: {
-        layoutDirection: 'vertical',
+        layoutDirection: "vertical",
       },
     },
   },
@@ -27,24 +27,20 @@ const toolbox = generateFieldTestBlocks('color_wheel', [
 /**
  * Create a workspace.
  * @param {HTMLElement} blocklyDiv The blockly container div.
- * @param {!Blockly.BlocklyOptions} options The Blockly options.
- * @return {!Blockly.WorkspaceSvg} The created workspace.
+ * @param {BlocklyOptions} options The Blockly options.
+ * @return {WorkspaceSvg} The created workspace.
  */
-function createWorkspace(
-    blocklyDiv: HTMLElement,
-    options: Blockly.BlocklyOptions
-): Blockly.WorkspaceSvg {
-  const workspace = Blockly.inject(blocklyDiv, options);
-  return workspace;
+function createWorkspace(blocklyDiv, options) {
+  return inject(blocklyDiv, options);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   const defaultOptions = {
     toolbox,
   };
   createPlayground(
-      document.getElementById('root'),
-      createWorkspace,
-      defaultOptions
+    document.getElementById("root"),
+    createWorkspace,
+    defaultOptions
   );
 });

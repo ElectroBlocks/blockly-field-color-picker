@@ -13,7 +13,7 @@ import iro from "@jaames/iro";
 /**
  * This is the class for the color wheel.
  */
-export class ColorWheelField extends FieldColour {
+export default class ColorWheelField extends FieldColour {
   /**
    * Class for the color picker.
    *
